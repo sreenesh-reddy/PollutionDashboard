@@ -1,38 +1,244 @@
-.App {
-  text-align: center;
+#hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;               /* Add display: flex to enable flexbox */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#hero #title {
+  font-size: 10rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hero #name{
+  font-size:30px;
+}
+#hero #input{
+  font-size: 4.5rem;
+  border-radius: 50px;
+  padding-left: 50px;
+  background-color: white;
+}
+#hero #input:active{
+  font-size: 4.5rem;
+  border-radius: 50px;
+  padding-left: 50px;
+  background-color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#hero button{
+  height: 50px;
+  width: 250px;
+  background-color: white;
+  border-radius: 50px;
+transition: 0.5s ease-in-out;
+}
+
+#hero button:hover{
+  cursor:pointer;
+  color:white;
+  background-color: black;
+}
+
+#dashboard{
+  width: 100vw;
+  height:100vh;
+  padding: 5rem 0;
+}
+
+#dashboardOutline #card{
+  height:fit-content;
+  width: 1000px;
+  padding:0 50px;
+  margin: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:50px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+  margin: 20px auto;
+}
+/* Dashboard Container */
+.dashboard {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  background-color: #f4f7fa;
+  min-height: 100vh;
+}
+
+/* Card Style */
+.card {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header */
+.card-header {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Air Quality Classification */
+.total{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.outline{
+  display:flex;
+  max-width: 80vw;
+  height:100vh;
+  margin:0;
+  font-weight:450;
+  grid-template-columns: repeat(2,0.5fr);
+  align-items: center;
+  background-color: white;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.outline .dashboard-outline{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  margin-left:50px;
+  transform: scale(0.9);
+}
+
+.outline .dashboard-outline .city{
+  min-width: 100%;
+  font-size:100px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.outline .dashboard-outline .airpollutant{
+  display:flex;
+  flex-direction: row;
+  gap:10px;
+
+}
+
+.outline .dashboard-outline .airpollutant .card{
+  text-align: center;
+  width: 80%;
+  height:100%;
+  padding: 10px 30px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.1);
+  font-size:30px;
+  transition: 0.2s ease-in-out;
+}
+
+.outline .dashboard-outline .airpollutant .card span .pollutant-value{
+  font-weight: 700;
   }
-  to {
-    transform: rotate(360deg);
+
+.outline .dashboard-outline .ghg{
+  display:flex;
+  flex-direction:row;
+  gap:30px;
+
+}
+
+.outline .dashboard-outline .ghg .green{
+  display:grid;
+  height:90%;
+  gap:40px;
+  grid-template-columns: repeat(2,1fr);
+  margin:0;
+
+}
+
+.outline .dashboard-outline .ghg .green .card{
+  display:flex;
+  flex-direction: column;
+  height:80%;
+  width: 90%;
+  text-align: center;
+  font-size:20px;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  margin:0;
+}
+
+.outline .dashboard-outline .ghg .green .card .pollutant-value{
+font-weight: 700;
+}
+
+
+.outline .dashboard-outline .ghg .climate .card{
+  display:flex;
+  flex-direction: column;
+  height:90%;
+  width: 85%;
+  margin:0;
+  text-align: center;
+  font-size:25px;
+  gap:60px;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.outline .dashboard-outline .ghg .climate .card .pollutant-value{
+  font-weight: 700;
   }
+
+.outline .dashboard-outline .AQI .card{
+  display:flex;
+  flex-direction: column;
+  min-height:90%;
+  min-width: 96%;
+  text-align: center;
+  font-size:50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.outline .lottiecontainer{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+  margin-left:50px;
+  transform:scale(1.7);
+  font-size:30px;
+  gap:70px;
+  margin-right:100px;
+}
+.aqi{
+  font-weight: 640;
 }
