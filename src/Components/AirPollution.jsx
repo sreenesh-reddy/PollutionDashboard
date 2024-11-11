@@ -53,8 +53,8 @@ function AirPollution() {
     };
 
     const classifyAirQuality = (aqi) => {
-        if (aqi <= 50) setAirQuality("Good");
-        else if (aqi <= 100) setAirQuality("Moderate");
+        if (aqi < 5) setAirQuality("Good");
+        else if (aqi <= 50) setAirQuality("Moderate");
         else setAirQuality("Bad");
     };
 
@@ -69,7 +69,7 @@ function AirPollution() {
     };
 
     return (
-        <div>
+        <div className='whole'>
             <section id="hero">
                 <div>
                     <span id="title">Airval</span>
@@ -82,13 +82,13 @@ function AirPollution() {
                     value={location}
                     onChange={(e) => setLocation(e.target.value)}
                 />
-                <button onClick={fetchCoordinates}>Check Pollution Level</button>
+                <a href="#total"><button onClick={fetchCoordinates}>Check Pollution Level</button></a>
             </section>
             {error ? (
                 <p>{error}</p>
             ) : (
                 pollutionData && (
-                    <div className='total'>
+                    <div id="total" className='total'>
                     <div className="outline">
                         <div className="dashboard-outline">
                             <div className='city'>
