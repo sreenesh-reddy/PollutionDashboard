@@ -110,7 +110,8 @@ transition: 0.5s ease-in-out;
   justify-content: center;
   align-items: center;
   background-color: linear-gradient(white,#f4f7fa);
-  
+  flex-direction: column;
+  font-size:25px;
 }
 
 .outline{
@@ -124,6 +125,8 @@ transition: 0.5s ease-in-out;
   background-color: white;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
+  transform:scale(0.9);
+  
 
 }
 
@@ -145,7 +148,7 @@ transition: 0.5s ease-in-out;
 .outline .dashboard-outline .airpollutant{
   display:flex;
   flex-direction: row;
-  gap:10px;
+  gap:0px;
 
 }
 
@@ -169,16 +172,17 @@ transition: 0.5s ease-in-out;
 .outline .dashboard-outline .ghg{
   display:flex;
   flex-direction:row;
-  gap:30px;
+  gap:40px;
 
 }
 
 .outline .dashboard-outline .ghg .green{
   display:grid;
   height:90%;
-  gap:40px;
+  gap:30px;
   grid-template-columns: repeat(2,1fr);
   margin:0;
+  
 
 }
 

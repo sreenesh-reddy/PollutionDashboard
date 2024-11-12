@@ -144,6 +144,7 @@ function AirPollution() {
                             </span>
                         </div>
                     </div>
+                    <span> Changes take few seconds to be reflected after your search.</span>
                 </div>
                 )
             )}
